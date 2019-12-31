@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+    <script src='https://d3js.org/d3.v5.min.js'></script>
+    <html>
+
+    <head>
+        <title>To soon display data...</title>
+        <style type='text/css'>
+            h3.title {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                text-align: center;
+                transform: translate(-50%, 0%);
+            }
+            div.bar {
+                display: inline-block;
+                width: 20px;
+                height: 75px;
+                background-color: teal;
+                margin-right: 2px;
+            }
+            
+            div.overlay {
+                padding: 5px;
+                /* overflow: auto; */
+                color: black;
+                background-color:rgba(255, 255, 255, .9);
+                border-color: black;
+                border-width: 1px;
+                border-style: solid;
+                margin: auto;
+                display: inline-block;
+                position: absolute;
+                z-index: 10;
+                opacity: 0;
+            }
+            
+            div.explain {
+                width: 600px;
+                margin: auto;
+                margin-top: 10px;
+                padding: 7px;
+                border-style: solid;
+                border-width: 1px;
+            }
+
+            div.button {
+                width: 300px;
+                margin: auto;
+                margin-top: 10px;
+                padding: 0%;
+                text-align: center
+            }
+
+            button {
+                background-color: #ff00004f;
+                color: white;
+                padding: 4px 10px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                border-radius: 5px;
+                border-width: 1px;
+                border-color: grey
+            }
+
+            svg.graph {
+                width: 600px;
+                height: 400px;
+                margin: auto;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+            }
+
+            .div text {
+                fill:black;
+                cursor: move;
+                text-align: center
+            }
+
+            .axis path,
+            .axis line {
+                fill: none;
+                stroke: black;
+                shape-rendering: crispEdges;
+            }
+
+            .axis text {
+                font-family: sans-serif;
+                font-size: 11px;
+            }
+        </style>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+            rel="stylesheet" type="text/css" />
+        <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" 
+            rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script type='text/javascript'src='petrosian.js'></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);">
+        </script>
+    </head>
+
+    <body>
+        <h3 class='title'> What Vahé Taught Me </h3>
+        <script>
+         renderMathInElement(document.body, {
+                delimiters: [
+                    {left: "$", right: "$", display: false},
+                    {left: "$$", right: "$$", display: true},
+                    {left: "\\[", right: "\\]", display: true}
+                    ]
+                });
+        </script>
+    </body>
+    </html>
