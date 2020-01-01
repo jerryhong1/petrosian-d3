@@ -1,0 +1,94 @@
+h1 {
+    font-size: 32px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0%);
+}
+
+div.bar {
+    display: inline-block;
+    width: 20px;
+    height: 75px;
+    background-color: teal;
+    margin-right: 2px;
+}
+
+div.overlay {
+    padding: 5px;
+    /* overflow: auto; */
+    color: black;
+    background-color:rgba(255, 255, 255, .9);
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    margin: auto;
+    display: inline-block;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+}
+
+div.explain {
+    margin: auto;
+    margin-top: 10px;
+    padding: 7px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+div.button {
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0%;
+    text-align: center
+}
+
+button {
+    background-color: #ff11117f;
+    color: white;
+    padding: 4px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: grey
+}
+
+svg.graph {
+    margin: auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.div text {
+    fill:black;
+    cursor: move;
+    text-align: center
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.image {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    display: block;
+    text-align : center; 
+  }
