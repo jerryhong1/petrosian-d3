@@ -140,19 +140,20 @@ gYLabel = gY.append("text")
     .attr("fill", "black")  
     .text("log(L) (erg/s)");
 
-// add cute intro gif
-var gif = scatterSvg.selectAll("image");
-gif.data([0])
-    .enter()
-    .append("svg:image")
-    .attr("xlink:href", "assets/quasar-animation.gif")
-    .attr("class", "image")
-    .attr("x", "100")
-    .attr("y", "70");
-
 // actions to perform when "next" is clicked (i.e. a description of how to transition forward to each slide)
 slideForward = [
     function () { // 0: Introduce project
+        // add cute intro gif
+        var gif = scatterSvg.selectAll("image");
+        gif.data([0])
+            .enter()
+            .append("svg:image")
+            .attr("xlink:href", "assets/quasar-animation.gif")
+            .attr("class", "image")
+            .attr("x", "100")
+            .attr("y", "70")
+        gif.transition()
+        .duration(1000).style("opacity", "1");
         explainDiv.append('text')
             .attr("fill", "black")
             .attr('x', 100)
@@ -162,8 +163,7 @@ slideForward = [
             " To properly analyze our data, however, we had to account for the <b>Malmquist Bias</b>.");    
     },
     function () {  // 1: introduce L vs z scatterplot
-        scatterSvg.selectAll("image").transition()
-            .duration(1000).style("opacity", "0");
+        scatterSvg.selectAll("image").remove();
         points.transition()
             .duration(800)
             .attr('r', 3);
@@ -193,7 +193,7 @@ slideForward = [
                     .attr('r', "3");
                 });
         explainDiv.html("To illustrate this point, here is a subset of the quasars I analyzed (~100 out of 100,000)" + 
-            " plotted on a luminosity vs. redshift scatterplot. On first glance," +
+            " plotted on a luminosity vs. redshift scatterplot. Hover to see specific values! On first glance," +
             " there appears to be a strong positive correlation.");
 
     },
@@ -239,8 +239,15 @@ slideForward[0]();
 // actions to perform when "Previous" is clicked (i.e. a description of how to transition backward to each slide)
 slideBackward = [
     function () { // 0: Introduce project
-        scatterSvg.selectAll("image").transition()
-            .duration(1000).style("opacity", "1");
+        // add cute intro gif
+        var gif = scatterSvg.selectAll("image");
+        gif.data([0])
+            .enter()
+            .append("svg:image")
+            .attr("xlink:href", "assets/quasar-animation.gif")
+            .attr("class", "image")
+            .attr("x", "100")
+            .attr("y", "70");
         explainDiv.html("One primary goal of my research over the summer was to determine the correlation between " + 
             " a quasar's luminosity (power output) and its redshift (effectively, distance from Earth)." + 
             " To properly analyze our data, however, we had to account for the <b>Malmquist Bias</b>.");
@@ -252,7 +259,7 @@ slideBackward = [
     },
     function () {  // 1: introduce L vs z scatterplot
         explainDiv.html("To illustrate this point, here is a subset of the quasars I analyzed (~100 out of 100,000)" + 
-            " plotted on a luminosity vs. redshift scatterplot. On first glance," +
+            " plotted on a luminosity vs. redshift scatterplot. Hover to see specific values! On first glance," +
             " there appears to be a strong positive correlation.");
         truncationLine.transition()
             .duration(1000)
